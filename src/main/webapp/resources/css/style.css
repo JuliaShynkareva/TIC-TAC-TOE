@@ -1,0 +1,50 @@
+html {
+    background: linear-gradient(7deg, rgb(99, 131, 227), rgb(227, 249, 131));
+    background: -webkit-linear-gradient(7deg, rgb(99, 131, 227), rgb(227, 249, 131));
+}
+
+body {
+    color: #1b0736;
+    font-family: 'Open Sans', fantasy;
+    font-size: 16px;
+}
+
+.containerForButton {
+    border: 5px groove #512751;
+    background: #7e175a;
+    margin: auto;
+    height: 318px;
+    width: 354px;
+}
+
+#1, #2, #3 {
+    height: 100px;
+    width: 300px;
+}
+
+.RestartButton {
+    width: 116px;
+    height: 116px;
+}
+
+.userSteps {
+    position: absolute;
+    margin-top: -39%;
+    margin-left: 1%;
+    width: 411px;
+    border: solid;
+    font-family: 'Open Sans', cursive;
+    font-size: larger;
+    color: #7e175a;
+}
+
+.computerSteps {
+    position: absolute;
+    margin-top: -39%;
+    margin-left: 66%;
+    width: 425px;
+    border: solid;
+    font-family: 'Open Sans', cursive;
+    font-size: larger;
+    color: #7e175a;
+}
