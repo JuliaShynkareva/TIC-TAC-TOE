@@ -34,6 +34,7 @@ public class TicTacToeController {
 	public String resetFunction(ModelMap model, HttpServletRequest request) {
 		setInitialModel(request, model);
 		request.getSession().removeAttribute("movesUserSession");
+		request.getSession().removeAttribute("movesCompSession");
 		return "tictactoe";
 	}
 
@@ -97,6 +98,7 @@ public class TicTacToeController {
 						model.addAttribute("newMessage", MESSAGE_YOU_LOST);
 						setInitialModel(request, model);
 						session.removeAttribute("movesUserSession");
+						session.removeAttribute("movesCompSession");
 					}
 
 					//System.out.println(movesMassive.toString());
@@ -105,11 +107,13 @@ public class TicTacToeController {
 					model.addAttribute("newMessage", MESSAGE_MOVES_ENDED);
 					setInitialModel(request, model);
 					session.removeAttribute("movesUserSession");
+					session.removeAttribute("movesCompSession");
 				}
 			} else {
 				model.addAttribute("newMessage", MESSAGE_YOU_WON);
 				setInitialModel(request, model);
 				session.removeAttribute("movesUserSession");
+				session.removeAttribute("movesCompSession");
 			}
 		} else {
 			model.addAttribute("newMessage", ERROR_MESSAGE_NOT_EMPTY);
